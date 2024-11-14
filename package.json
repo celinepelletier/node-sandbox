@@ -1,0 +1,40 @@
+{
+    "name": "starrocks-workbench",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "engines": {
+        "node": ">=v20.9.0",
+        "npm": ">=v10.1.0"
+    },
+    "scripts": {
+        "build": "npm run clean; tsc ",
+        "build:run": "npm run build; npm start",
+        "clean": "rm -rf ./dist/* ",
+        "lint": "eslint . --ext .ts",
+        "lint:fix": "eslint . --ext .ts --fix",
+        "dev": "nodemon",
+        "start": "ts-node ./src/index.ts",
+        "test": "jest --watchAll",
+        "test:silent": "jest --silent",
+        "test:coverage": "jest --coverage"
+    },
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.9.0",
+        "@typescript-eslint/eslint-plugin": "^8.14.0",
+        "@typescript-eslint/parser": "^8.14.0",
+        "eslint": "^9.14.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "jest": "^29.7.0",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.3.3",
+        "ts-jest": "^29.2.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.3"
+    }
+}
